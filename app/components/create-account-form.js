@@ -8,7 +8,7 @@ export default Ember.Component.extend({
 
   actions:{
     submit () {
-      console.log(this);
+      console.log(this.username, this.contentType, this.creator);
     },
   }
 });
