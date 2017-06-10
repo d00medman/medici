@@ -1,0 +1,11 @@
+{{username-input username=username}}
+{{input type="checkbox" name="isCreator" checked=isAdmin}}
+{{content-type-input type=type}}
+
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Create account
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button>
