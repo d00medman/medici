@@ -1,6 +1,6 @@
-{{username-input username=username}}
-{{input type="checkbox" name="isCreator" checked=isAdmin}}
-{{content-type-input type=type}}
+{{username-input username=params.username}}
+{{input type="checkbox" name="isCreator" checked=params.creator}}
+{{content-type-input contentType=params.type}}
 
 <button type="submit" class="btn btn-primary" {{action "submit"}}>
   Create account
