@@ -1,4 +1,4 @@
-<h3>hello</h3>
+<h3>This is my account</h3>
 <ul>
   {{#each model as |account|}}
   <li>{{account.id}}</li>
@@ -8,3 +8,5 @@
   <li>{{account.coinbaseEmail}}</li>
   {{/each}}
 </ul>
+
+{{#link-to my-account}}my account{{/link-to}}

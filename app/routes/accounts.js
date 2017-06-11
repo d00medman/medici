@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model () {
-    console.log(this.get('store').peekRecord('account', 4));
+    console.log(this.get('store').findRecord('account', 13));
     return [{
         id: 13,
         userName : 'BLACKBART',
