@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('create-account');
+  this.route('accounts');
 });
 
 export default Router;

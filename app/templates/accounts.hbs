@@ -1,0 +1,10 @@
+<h3>hello</h3>
+<ul>
+  {{#each model as |account|}}
+  <li>{{account.id}}</li>
+  <li>{{account.userName}}</li>
+  <li>{{account.creator}}</li>
+  <li>{{account.contentType}}</li>
+  <li>{{account.coinbaseEmail}}</li>
+  {{/each}}
+</ul>
