@@ -1,8 +1,8 @@
 
-{{input value=username placeholder="User Name"}}
-{{input type="checkbox" name="isCreator" checked=creator}}
+{{input value=params.username placeholder="User Name"}}
+{{input type="checkbox" name="isCreator" checked=params.creator}}
 <h5>Do you wish to be a client?</h5>
-{{input value=contentType placeholder="What will you be creating?"}}
+{{input value=params.contentType placeholder="What will you be creating?"}}
 
 <button type="submit" class="btn btn-primary" {{action "submit"}}>
   Create account

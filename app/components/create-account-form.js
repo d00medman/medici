@@ -8,7 +8,11 @@ export default Ember.Component.extend({
 
   actions:{
     submit () {
-      console.log(this.username, this.contentType, this.creator);
+      this.sendAction('submit', this.get('params'));
+    },
+
+    reset () {
+      this.set('params', {});
     },
   }
 });
