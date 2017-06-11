@@ -13,7 +13,8 @@ Router.map(function () {
   this.route('create-account');
   this.route('accounts');
   // this.route('accounts', function(){
-  //   this.route('my-account');
+    // this.route('accounts/:account_id', {path:'/my-account'});
+    // this.route('my-account', {path:'/:account_id'});
   // });
   this.route('donate');
 });
