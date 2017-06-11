@@ -6,9 +6,9 @@ export default Ember.Route.extend({
   credentials: storageFor('auth'),
 
   actions: {
-    // model (params) {
-    //   return this.get('store').findRecord('account', params.list_id);
-    // },
+    model (params) {
+      return this.get('store').findRecord('account', params.list_id);
+    },
 
     createAccount (params) {
       console.log(params);

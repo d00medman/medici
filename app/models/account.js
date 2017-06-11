@@ -5,5 +5,5 @@ export default DS.Model.extend({
   content_type: DS.attr('string'),
   creator: DS.attr('boolean'),
   coinbase_email: DS.attr('string'),
-  user: DS.belongsTo('user')
+  user_id: DS.belongsTo('user')
 });
