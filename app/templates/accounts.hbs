@@ -1,7 +1,3 @@
+{{account model=account}}
 <h3>This is my account</h3>
-<p>{{id}}</p>
-<ul>
-  {{#each model as |account|}}
-    <li>{{account.creator}}</li>
-  {{/each}}
-</ul>
+<p>{{account.user_name}}</p>
