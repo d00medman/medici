@@ -1,0 +1,12 @@
+{{input value=params.amt placeholder="How much bitcoin will you send?"}}
+{{input value=params.description placeholder="Anything to say to the client?"}}
+
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Send Donation
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button>
+
+<h5>note: current implementation only working to cover leg one of the donation process</h5>

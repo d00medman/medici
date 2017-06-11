@@ -11,21 +11,8 @@ export default Ember.Route.extend({
     },
 
     createAccount (params) {
-      console.log(params);
       let account = this.get('store').createRecord('account', params);
-      console.log(account);
       account.save();
-
-    // this.create(params)
-    //   .then(() => this.transitionTo('application'))
-    //   .then(() => {
-    //     this.get('flashMessages')
-    //     .success('Successfully signed-up! You have also been signed-in.');
-    //   })
-    //   .catch(() => {
-    //     this.get('flashMessages')
-    //     .danger('There was a problem. Please try again.');
-    //   });
     },
   },
 });

@@ -9,4 +9,10 @@ export default Ember.Route.extend({
     return targ;
   },
 
+  // actions: {
+  //   donate(params){
+  //
+  //   }
+  // }
+
 });
