@@ -11,13 +11,18 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('create-account');
+
+
+  // this.route('accounts');
   this.route('accounts', function(){
     this.route('my-account');
   });
   // this.route('accounts', function(){
-    // this.route('accounts/:account_id', {path:'/my-account'});
-    // this.route('my-account', {path:'/:account_id'});
+  //   this.route('/:account_id', {path:'/my-account'});
+  //   this.route('my-account', {path:'/:account_id'});
   // });
+
+
   this.route('donate');
 });
 

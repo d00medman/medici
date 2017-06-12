@@ -1,18 +1,19 @@
 import ApplicationAdapter from './application';
 
 export default ApplicationAdapter.extend({
-  // Not super confident about this adapter, not am I super confident about how I
-  // am passing data through it.
-  donate: function(){
-    console.log('hits');
+  urlForRequest: function (account_id){
+    const api = this.get('host');
+    const url = `${api}/accounts/${account_id}/donate`;
+    return url;
   }
-  // donate: function(store, type, record) {
-  //   console.log('hits')
-    // let api = this.get('host');
-    // let serialized = this.serialize(record, {includeId: true});
-    // let accountId = serialized.account_id;
-    // let url = `${api}/accounts/${accountId}/donate`;
-    // let data = {account: serialized};
-    // return this.ajax(url, 'PATCH', {data});
+
+  // donate (store, type, record) {
+  //   const api = this.get('host');
+  //   const serialized = this.serialize(record, { includeId: true });
+  //   const accountId = serialized.account_id;
+  //   const url = `${api}/lists/${accountId}/items`;
+  //   const data = { item: serialized };
+  //
+  //   return this.ajax(url, 'POST', { data });
   // }
 });
