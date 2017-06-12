@@ -8,6 +8,7 @@ export default ApplicationAdapter.extend({
   // }
 
   donate (params, accountId) {
+    console.log('params: ', params);
     const api = this.get('host');
     // Herein lies a huge problem: I am not sure how I would go about getting the account ID from the user id.
     console.log(accountId);
@@ -21,6 +22,6 @@ export default ApplicationAdapter.extend({
     // const url = `${api}/lists/${accountId}/items`;
     // const data = { item: serialized };
     //
-    // return this.ajax(url, 'POST', { data });
+    return this.ajax(url, 'PATCH', params);
   }
 });

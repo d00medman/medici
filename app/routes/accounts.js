@@ -9,8 +9,8 @@ export default Ember.Route.extend({
   // },
   auth: Ember.inject.service(),
 
-  model (params) {
-    console.log(params)
+  // model (params) {
+    // console.log(params)
     // let current_user = this.get('auth.credentials.id');
     // console.log('current user ', current_user);
 
@@ -21,7 +21,7 @@ export default Ember.Route.extend({
     // console.log(targ.user_name);
     // return targ;
     // return this.get('store').findRecord('account', 27);
-  },
+  // },
 
   // actions: {
   //   donate(params){

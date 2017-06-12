@@ -21,8 +21,6 @@ Router.map(function () {
   //   this.route('/:account_id', {path:'/my-account'});
   //   this.route('my-account', {path:'/:account_id'});
   // });
-
-
   this.route('donate');
 });
 
