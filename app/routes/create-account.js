@@ -24,7 +24,15 @@ export default Ember.Route.extend({
       account.set('user', user);
       // let account = this.get('store').createRecord('account', params);
       // console.log('account ', account);
-      account.save();
+      account.save()
+      .then(() => {
+        this.get('flashMessages')
+        .success('account created');
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+      });
     },
   },
 });

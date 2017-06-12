@@ -7,11 +7,17 @@ export default ApplicationAdapter.extend({
   //   return url;
   // }
 
-  donate () {
-    console.log('hola');
-    // const api = this.get('host');
+  donate (params, accountId) {
+    const api = this.get('host');
+    // Herein lies a huge problem: I am not sure how I would go about getting the account ID from the user id.
+    console.log(accountId);
+    const url = `${api}/accounts/${accountId}/donate`;
+    console.log(url);
+
     // const serialized = this.serialize(record, { includeId: true });
     // const accountId = serialized.account_id;
+    // console.log(serialized);
+    // console.log(accountId);
     // const url = `${api}/lists/${accountId}/items`;
     // const data = { item: serialized };
     //
