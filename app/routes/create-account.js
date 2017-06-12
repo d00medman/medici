@@ -15,12 +15,14 @@ export default Ember.Route.extend({
 
     createAccount (params) {
       // console.log(params);
-      // let current_user = this.get('auth.credentials.id');
+      let current_user = this.get('auth.credentials.id');
       // console.log('current user ', current_user);
       // let user = this.get('store').peekRecord('user', current_user);
       // console.log(this.get('store').peekRecord('user', current_user));
+      let user = this.get('store').peekRecord('user', current_user);
       let account = this.get('store').createRecord('account', params);
-      // let account = this.get('store').createRecord('account', {user:current_user });
+      account.set('user', user);
+      // let account = this.get('store').createRecord('account', params);
       // console.log('account ', account);
       account.save();
     },

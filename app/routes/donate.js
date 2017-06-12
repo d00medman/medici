@@ -10,9 +10,11 @@ export default Ember.Route.extend({
 
   actions: {
     donate(params){
-      let patron = this.get('store').findRecord('account', 10);
-      console.log('hits route');
-      console.log(patron);
+      const adapter = this.store.adapterFor('account');
+      // let patron = this.get('store').findRecord('account', 10);
+      // console.log('hits route');
+      // console.log(patron);
+      adapter.donate();
       // let adapter = app.adapters.donate.create();
       // return Donate.donate();
     }
