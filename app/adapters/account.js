@@ -22,6 +22,6 @@ export default ApplicationAdapter.extend({
     // const url = `${api}/lists/${accountId}/items`;
     // const data = { item: serialized };
     //
-    return this.ajax(url, 'PATCH', { params });
+    return this.ajax(url, 'PATCH', {data: params});
   }
 });
