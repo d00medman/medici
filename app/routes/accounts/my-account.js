@@ -1,16 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
-  // model () {
-  //   return {
-  //     user_name:"hello"
-  //   };
-  // },
-  auth: Ember.inject.service(),
-
   model (params) {
-    console.log(params)
+    console.log(params);
     // let current_user = this.get('auth.credentials.id');
     // console.log('current user ', current_user);
 
@@ -20,14 +12,6 @@ export default Ember.Route.extend({
     // let targ = this.get('store').findRecord('account');
     // console.log(targ.user_name);
     // return targ;
-    // return this.get('store').findRecord('account', 27);
+    return this.get('store').findRecord('account', 27);
   },
-
-  // actions: {
-  //   donate(params){
-  //     let adapter = app.adapters.donate.create();
-  //     return adapter.donate();
-  //   }
-  // }
-
 });

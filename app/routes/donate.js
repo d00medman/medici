@@ -12,12 +12,13 @@ export default Ember.Route.extend({
 
   actions: {
     donate(params){
+      console.log(params);
       // const adapter = this.store.adapterFor('account');
       // Hitting the same problem: ability to build relationally in the local DS broken
-      let currentUser = this.get('auth.credentials.id');
-      let targ = this.get('store').findRecord('user', currentUser);
-      console.log(targ);
-      let patron = this.get('store').findRecord('account');
+      // let currentUser = this.get('auth.credentials.id');
+      // let targ = this.get('store').findRecord('user', currentUser);
+      // console.log(targ);
+      // let patron = this.get('store').findRecord('account');
       // console.log('hits route');
       // console.log(patron);
       // adapter.donate(params, accountId);
