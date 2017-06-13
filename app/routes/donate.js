@@ -21,8 +21,10 @@ export default Ember.Route.extend({
       // let patron = this.get('store').findRecord('account');
       // console.log('hits route');
       // console.log(patron);
-      let accountId = 28; // currently hardcoded until I can figure out how to pass params to the routes
-      adapter.donate(params, accountId);
+      let patronId = 28; // currently hardcoded until I can figure out how to pass params to the routes
+      let clientId = 29; // currently hardcoded until I can figure out how to pass params to the routes
+      adapter.donate(params, patronId);
+      adapter.recieve_donation(params, clientId);
       // let adapter = app.adapters.donate.create();
       // return adapter.donate();
     }
