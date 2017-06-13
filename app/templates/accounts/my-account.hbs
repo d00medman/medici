@@ -1,7 +1,9 @@
 <h3>hola</h3>
 
 {{#each model as |account|}}
-  {{accounts/my-account account=account}}
+  {{#if account.editable}}
+    {{accounts/my-account account=account}}
+  {{/if}}
 {{/each}}
 
 
