@@ -7,6 +7,10 @@ export default Ember.Route.extend({
   model (params) {
     // console.log(params);
     let currentUser = this.get('auth.credentials.id');
+    // let user = this.store.peekRecord('user', currentUser);
+    // user.get('account').then((account) => {
+    //   console.log(account);
+    // });
     // console.log('current user ', currentUser);
     // const adapter = this.store.adapterFor('account');
     // let targ = adapter.getAccountId(currentUser);
@@ -29,12 +33,10 @@ export default Ember.Route.extend({
     // let accountID = this.store.query('account', { filter: { user: { id:currentUser} } });
     // console.log(accountID.id);
     // return this.get('store').findRecord('account', accountID);
-    return this.store.query('account', { filter: { user: { id: currentUser } } })
+    return this.store.query('account', { filter: { user:  currentUser } })
     .then((accounts) => {
-      console.log(accounts);
-      return accounts[0];
-      // return accounts.get('firstObject');
-    })
+        return accounts;
+      })
     .catch((error) => {
       console.log(error);
     });

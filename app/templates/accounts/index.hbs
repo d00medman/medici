@@ -1,4 +1,5 @@
 <h4>Account.hbs</h4>
 
-{{#link-to 'accounts.my-account'}}My Account|{{/link-to}}
 {{#link-to 'donate'}}|Donate{{/link-to}}
+
+{{accounts/find-account submit=getAccount}}

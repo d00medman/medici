@@ -1,8 +1,12 @@
 <h3>hola</h3>
 
-{{accounts/my-account account=model}}
+{{#each model as |account|}}
+  {{accounts/my-account account=account}}
+{{/each}}
 
-<h4>Delete or update your account here</h4>
+
 {{accounts/update-account}}
 
 {{#link-to 'accounts'}}Back{{/link-to}}
+
+{{outlet}}
