@@ -26,9 +26,17 @@ export default Ember.Route.extend({
     // console.log(targ.user_name);
     // return targ;
     // return this.get('store').findRecord('account', targ);
-    let accountID = this.store.query('account', { filter: { user: { id:currentUser} } });
-    console.log(accountID.id);
-    return this.get('store').findRecord('account', accountID);
-
+    // let accountID = this.store.query('account', { filter: { user: { id:currentUser} } });
+    // console.log(accountID.id);
+    // return this.get('store').findRecord('account', accountID);
+    return this.store.query('account', { filter: { user: { id: currentUser } } })
+    .then((accounts) => {
+      console.log(accounts);
+      return accounts[0];
+      // return accounts.get('firstObject');
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   },
 });
