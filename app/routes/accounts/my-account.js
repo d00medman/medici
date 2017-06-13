@@ -1,17 +1,34 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model (params) {
-    console.log(params);
-    // let current_user = this.get('auth.credentials.id');
-    // console.log('current user ', current_user);
 
-    // This needs to be tremendously simplified and hardcoded
-    // console.log('hits')
+    auth: Ember.inject.service(),
+
+  model (params) {
     // console.log(params);
-    // let targ = this.get('store').findRecord('account');
+    let currentUser = this.get('auth.credentials.id');
+    // console.log('current user ', currentUser);
+    // const adapter = this.store.adapterFor('account');
+    // let targ = adapter.getAccountId(currentUser);
+    // targ.then((accountId) => {
+    //   return this.get('store').findRecord('account', accountId);
+    // });
+    // return adapter.getAccountId(currentUser);
+    // let targ = (this.store.queryRecord('account', { filter: { user: { id:currentUser } } }));
+    // let targ = (this.store.queryRecord('account', { filter: { user_id: currentUser} }));
+    // console.log('targ: ', targ);
+    // targ = targ.id;
+    // This needs to be tremendously simplified and hardcoded
+    // console.log(targ);
+    // console.log(params);
+    // let user = this.store.peekRecord('user', currentUser);
+    // return this.store.queryRecord('account', { filter: { user: user} });
     // console.log(targ.user_name);
     // return targ;
-    return this.get('store').findRecord('account', 27);
+    // return this.get('store').findRecord('account', targ);
+    let accountID = this.store.query('account', { filter: { user: { id:currentUser} } });
+    console.log(accountID.id);
+    return this.get('store').findRecord('account', accountID);
+
   },
 });
