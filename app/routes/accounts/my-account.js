@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-    auth: Ember.inject.service(),
+  auth: Ember.inject.service(),
 
-  model (params) {
+  model () {
     // console.log(params);
     let currentUser = this.get('auth.credentials.id');
     // let user = this.store.peekRecord('user', currentUser);
@@ -41,4 +41,9 @@ export default Ember.Route.extend({
       console.log(error);
     });
   },
+
+  updateAccount(params) {
+    console.log('hits');
+    console.log(params);
+  }
 });
