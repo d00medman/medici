@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   'use strict';
-  const ENV = {
+  var ENV = {
     modulePrefix: 'medici',
     environment: environment,
     rootURL: '/',
@@ -49,7 +49,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/medici';
     ENV.locationType = 'hash';
+    ENV.apiHost = 'https://mediciapi.herokuapp.com';
   }
 
   return ENV;
