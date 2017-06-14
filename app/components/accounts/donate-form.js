@@ -7,7 +7,8 @@ export default Ember.Component.extend({
   params: {},
 
   actions:{
-    donate(){
+    donate(accountId){
+      this.get('params').clientId = accountId;
       console.log('hits donate form component ', this.get('params'));
       this.sendAction('donate', this.get('params'));
     },
