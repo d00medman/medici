@@ -25,7 +25,7 @@ export default Ember.Route.extend({
       // let account = this.get('store').createRecord('account', params);
       // console.log('account ', account);
       account.save()
-      .then(() => this.transitionTo('accounts'))
+      .then(() => this.transitionTo('accounts.create-account'))
       .then(() => {
         this.get('flashMessages')
         .success('account created');
