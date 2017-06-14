@@ -4,4 +4,4 @@
 <p>Are they a creator?: {{account.creator}}</p>
 <p>Account ID: {{account.id}}</p>
 
-{{#link-to 'donate'}}Donate to this user{{/link-to}}
+{{accounts/donate-form donate="donate" account=account}}

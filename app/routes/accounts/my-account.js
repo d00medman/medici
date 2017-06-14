@@ -48,10 +48,12 @@ export default Ember.Route.extend({
           .then(() => {
             this.get('flashMessages')
             .success('You have deleted your account. Please make a new one if you wish to continue using Medici.');
+          })
+          .catch(() => {
+            this.get('flashMessages')
+            .danger('There was a problem. Please try again.');
           });
         });
     }
   }
-
-
 });

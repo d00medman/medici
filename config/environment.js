@@ -2,6 +2,7 @@
 
 module.exports = function (environment) {
   'use strict';
+
   var ENV = {
     modulePrefix: 'medici',
     environment: environment,
