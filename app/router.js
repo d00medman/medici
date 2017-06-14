@@ -19,6 +19,7 @@ Router.map(function () {
     // this.route('my-account', { path: '/my-account/:account_id' });
     this.route('view-account', {path:'/view-account/:account_id'});
     this.route('search-accounts');
+    this.route('donate');
   });
   // this.route('accounts', function(){
   //   this.route('/:account_id', {path:'/my-account'});
