@@ -5,19 +5,26 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
 
   model () {
-    let currentUser = this.get('auth.credentials.id');
-    return this.store.query('account', { filter: { user:  currentUser } })
-    .then((accounts) => {
-        return accounts;
+    return this.get('store').findAll('account', {reload:true})
+      .then((accounts) => {
+        let account = accounts.findBy('editable', true);
+        return account;
       })
-    .catch((error) => {
-      console.log(error);
-    });
+      .catch((error) => {
+        console.log(error);
+      });
+    // return this.store.query('account', { filter: { user:  currentUser } })
+    // .then((accounts) => {
+    //     return accounts;
+    //   })
+    // .catch((error) => {
+    //   console.log(error);
+    // });
   },
 
   actions: {
     updateAccount(params) {
-      console.log('in route: ', params)
+      console.log('in route: ', params);
     },
   }
 });

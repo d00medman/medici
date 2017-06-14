@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     searchAccount (params) {
 
       this.get('store').findAll('account',{reload:true})
-      .then((accounts) =>{
+      .then((accounts) => {
         if(accounts.findBy('user_name', params.userName)){
           let account = accounts.findBy('user_name', params.userName);
           return account.id;

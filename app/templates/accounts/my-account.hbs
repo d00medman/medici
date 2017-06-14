@@ -1,10 +1,6 @@
 <h3>hola</h3>
 
-{{#each model as |account|}}
-  {{#if account.editable}}
-    {{accounts/my-account account=account submit="updateAccount"}}
-  {{/if}}
-{{/each}}
+{{accounts/my-account account=model submit="updateAccount"}}
 
 {{#link-to 'accounts'}}Back{{/link-to}}
 
