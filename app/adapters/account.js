@@ -2,17 +2,16 @@ import ApplicationAdapter from './application';
 
 export default ApplicationAdapter.extend({
 
-  donate (params, accountId) {
-    console.log(params);
+  donate (params) {
     const api = this.get('host');
-    const url = `${api}/accounts/${accountId}/donate`;
+    const url = `${api}/accounts/${params.patronId}/donate`;
     return this.ajax(url, 'PATCH', {data: params});
   },
 
-  recieve_donation(params, accountId){
+  recieve_donation(params){
     console.log(params);
     const api = this.get('host');
-    const url = `${api}/accounts/${accountId}/recieve_donation`;
+    const url = `${api}/accounts/${params.clientId}/recieve_donation`;
     return this.ajax(url, 'PATCH', {data: params});
   },
 
