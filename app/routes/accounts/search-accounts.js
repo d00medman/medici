@@ -5,7 +5,8 @@ export default Ember.Route.extend({
   actions: {
     searchAccount (params) {
 
-      this.get('store').findAll('account',{reload:true}).then((accounts) =>{
+      this.get('store').findAll('account',{reload:true})
+      .then((accounts) =>{
         if(accounts.findBy('user_name', params.userName)){
           let account = accounts.findBy('user_name', params.userName);
           return account.id;
@@ -13,6 +14,14 @@ export default Ember.Route.extend({
           this.get('flashMessages')
             .danger(`There is no account with the username ${params.userName}`);
         }
+      })
+      .then((accountId) => {
+        this.transitionTo('accounts.view-account', accountId);
+        // this.transitionTo(`accounts.view-account.${accountId}`);
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
       });
       // this.store.query('account', { filter: { user_name: params.userName } })
       //   .then(accounts =>{
