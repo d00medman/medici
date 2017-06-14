@@ -7,24 +7,34 @@ export default Ember.Route.extend({
   model () {
     return this.get('store').findAll('account', {reload:true})
       .then((accounts) => {
-        let account = accounts.findBy('editable', true);
-        return account;
+        return accounts.findBy('editable', true);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
       });
-    // return this.store.query('account', { filter: { user:  currentUser } })
-    // .then((accounts) => {
-    //     return accounts;
-    //   })
-    // .catch((error) => {
-    //   console.log(error);
-    // });
   },
 
   actions: {
     updateAccount(params) {
-      console.log('in route: ', params);
+      return this.get('store').findAll('account', {reload:true})
+        .then((accounts) => {
+          return accounts.findBy('editable', true);
+        })
+        .then((account) => {
+          account.set('user_name', params.userName);
+          return account.save()
+          .then(() => {
+            this.get('flashMessages')
+            .success(`Username updated to ${params.userName}`);
+          });
+        })
+        .catch(() => {
+          this.get('flashMessages')
+          .danger('There was a problem. Please try again.');
+        });
     },
   }
+
+
 });
