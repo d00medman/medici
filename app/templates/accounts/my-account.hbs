@@ -2,7 +2,7 @@
 
 {{#each model as |account|}}
   {{#if account.editable}}
-    {{accounts/my-account account=account}}
+    {{accounts/my-account account=account submit="updateAccount"}}
   {{/if}}
 {{/each}}
 

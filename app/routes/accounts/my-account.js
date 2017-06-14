@@ -17,8 +17,7 @@ export default Ember.Route.extend({
 
   actions: {
     updateAccount(params) {
-      console.log('hits');
-      console.log(params);
+      console.log('in route: ', params)
     },
   }
 });
