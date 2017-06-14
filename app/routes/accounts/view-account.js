@@ -16,8 +16,8 @@ export default Ember.Route.extend({
         .then((account) => {
           params.patronId = account.id;
           const adapter = this.store.adapterFor('account');
-          return adapter.donate(params);
-          // adapter.recieve_donation(params);
+          // return adapter.donate(params);
+          adapter.recieve_donation(params);
         })
         .catch((error) => {
           console.log(error);
