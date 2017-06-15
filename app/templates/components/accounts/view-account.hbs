@@ -1,7 +1,10 @@
-<h4>view-account component</h4>
+<h4>Username: {{account.user_name}}</h4>
+<h5>Account status: {{if account.creator "Client" "Patron"}}</h5>
+{{#if account.creator}}
+  <h5>Creating: {{account.content_type}}</h5>
+{{/if}}
 
-<p>User Name: {{account.user_name}}</p>
-<p>Are they a creator?: {{account.creator}}</p>
-<p>Account ID: {{account.id}}</p>
 
-{{accounts/donate-form donate="donate" account=account}}
+{{#if account.creator}}
+  {{accounts/donate-form donate="donate" account=account}}
+{{/if}}

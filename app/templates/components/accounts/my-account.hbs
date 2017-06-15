@@ -1,7 +1,9 @@
 
 <h4>Username: {{account.user_name}}</h4>
 <h5>Account status: {{if account.creator "Client" "Patron"}}</h5>
-<h5>Creator of: {{if account.creator account.content_type}}</h5>
+{{#if account.creator}}
+  <h5>Creating: {{account.content_type}}</h5>
+{{/if}}
 
 
 {{accounts/update-account submit="submit"}}
