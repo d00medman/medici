@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
+  auth: Ember.inject.service(),
+  isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
   model(params){
     return this.get('store').findRecord('account', params.account_id);

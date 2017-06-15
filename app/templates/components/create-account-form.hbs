@@ -1,11 +1,6 @@
 
 {{input value=params.user_name placeholder="User Name"}}
-<button class="btn btn-success" {{action "isClient" }}>
-{{#unless isClient}}
-Create a Client account
-{{else}}
-I changed my mind
-{{/unless}}</button>
+
 {{#if isClient}}
   {{input value=params.content_type placeholder="What will you be creating?"}}
   <h6>{{input type="checkbox" name="isClient" checked=params.creator}}Confirm</h6>
@@ -17,6 +12,14 @@ I changed my mind
   {{else}}
   Create a Patron account
   {{/if}}
+</button>
+
+<button class="btn btn-success" {{action "isClient" }}>
+  {{#unless isClient}}
+  Create a Client account
+  {{else}}
+  I changed my mind
+  {{/unless}}
 </button>
 
 <button class="btn btn-default" {{action "reset"}}>
