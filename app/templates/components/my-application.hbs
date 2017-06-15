@@ -4,9 +4,9 @@
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
+        <li>{{#link-to "accounts.search-accounts"}}Find Medici Users{{/link-to}}</li>
         {{#if isAuthenticated}}
         <li>{{#link-to "accounts.my-account"}}My Account{{/link-to}}</li>
-        <li>{{#link-to "accounts.search-accounts"}}Find other Medici Users{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">

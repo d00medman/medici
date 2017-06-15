@@ -1,6 +1,6 @@
 {{#if account}}
   <h2>{{account.user_name}}</h2>
-  <h4>Account status: {{if account.creator "Client" "Patron"}}</h4>
+  <h4>{{if account.creator "Client" "Patron"}}</h4>
   {{#if account.creator}}
     <h4>Creating: {{account.content_type}}</h4>
   {{/if}}
