@@ -1,14 +1,19 @@
-
+{{#if isAuthenticated}}
 {{#if account}}
-<h3>My Account</h3>
+  <h3>My Account</h3>
   <h4>Username: {{account.user_name}}</h4>
   <h5>Account status: {{if account.creator "Client" "Patron"}}</h5>
   {{#if account.creator}}
-    <h5>Creating: {{account.content_type}}</h5>
+  <h5>Creating: {{account.content_type}}</h5>
   {{/if}}
   {{accounts/update-account submit="submit"}}
   {{accounts/delete-account-button delete="delete"}}
   <h5>{{#link-to 'accounts'}}Home{{/link-to}}</h5>
-{{else}}
-  <h4>In order to view your account, you must first either {{#link-to "sign-in"}}sign in{{/link-to}} or {{#link-to "sign-up"}}create an account{{/link-to}} if you do not already have one</h4>
+  {{else}}
+  <h4>In order to view your account, you must first {{#link-to "create-account"}}create an account{{/link-to}} if you do not already have one</h4>
+  {{/if}}
 {{/if}}
+
+{{#unless}}
+<h4>In order to view your account, you must first either {{#link-to "sign-in"}}sign in{{/link-to}} or {{#link-to "sign-up"}}create an account{{/link-to}} if you do not already have one</h4>
+{{/unless}}

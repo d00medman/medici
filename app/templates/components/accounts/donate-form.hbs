@@ -1,3 +1,4 @@
+{{#if isAuthenticated}}
 {{input value=params.amt placeholder="How much bitcoin will you send?"}}
 {{input value=params.description placeholder="Anything to say to the client?"}}
 
@@ -9,3 +10,6 @@
 <button class="btn btn-default" {{action "reset"}}>
   Cancel
 </button>
+{{else}}
+<p>In order to donate to this creator, you must first either {{#link-to "sign-in"}}sign in{{/link-to}} or {{#link-to "sign-up"}}create an account{{/link-to}} if you do not already have one.</p>
+{{/if}}

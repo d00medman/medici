@@ -1,8 +1,8 @@
 {{#if account}}
-  <h4>Username: {{account.user_name}}</h4>
-  <h5>Account status: {{if account.creator "Client" "Patron"}}</h5>
+  <h2>{{account.user_name}}</h2>
+  <h4>Account status: {{if account.creator "Client" "Patron"}}</h4>
   {{#if account.creator}}
-    <h5>Creating: {{account.content_type}}</h5>
+    <h4>Creating: {{account.content_type}}</h4>
   {{/if}}
   {{#if account.creator}}
     {{accounts/donate-form donate="donate" account=account}}
