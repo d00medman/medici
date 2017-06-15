@@ -1,5 +1,9 @@
-<h4>Accounts</h4>
+<h1>Welcome to Medici</h1>
+<h3>Be a patron of the arts</h3>
 
-{{#link-to 'accounts.my-account'}}|My Account|{{/link-to}}
-{{#link-to 'donate'}}|Donate|{{/link-to}}
-{{#link-to 'accounts.search-accounts'}}|Search for accounts|{{/link-to}}
+<h5>{{#link-to 'accounts.my-account'}}View my Account{{/link-to}}</h5>
+<h5>{{#link-to 'accounts.search-accounts'}}Find other users{{/link-to}}</h5>
+
+{{#if isAuthenticated}}
+<p>test</p>
+{{/if}}

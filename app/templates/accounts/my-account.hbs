@@ -1,7 +1,11 @@
-<h3>hola</h3>
+<h3>My Account</h3>
 
 {{accounts/my-account account=model submit="updateAccount" delete="deleteAccount"}}
 
 {{#link-to 'accounts'}}Back{{/link-to}}
+
+{{#if isAuthenticated}}
+<p>test</p>
+{{/if}}
 
 {{outlet}}
