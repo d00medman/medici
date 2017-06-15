@@ -1,8 +1,4 @@
-
-
-{{input value=params.amt placeholder="How much bitcoin will you send?"}}
 {{input value=params.description placeholder="Anything to say to the client?"}}
-
 
 <button type="submit" class="btn btn-primary" {{ action "donate" account.id }}>
   Send Donation
@@ -11,3 +7,5 @@
 <button class="btn btn-default" {{action "reset"}}>
   Cancel
 </button>
+
+<p>For both security purposes and ease of use, all donations will be exactly 0.0001 BTC, or approximately $0.25-0.30. Thank you for being so understanding</p>
