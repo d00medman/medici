@@ -32,7 +32,7 @@ export default Ember.Route.extend({
       })
       .catch(() => {
         this.get('flashMessages')
-        .danger('There was a problem. Please try again.');
+        .danger('We were unable to create your account. Please fill in the proper forms and try again');
       });
     },
   },

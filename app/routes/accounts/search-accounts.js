@@ -16,32 +16,15 @@ export default Ember.Route.extend({
         }
       })
       .then((accountId) => {
-        this.transitionTo('accounts.view-account', accountId);
+        if(accountId !=null){
+          this.transitionTo('accounts.view-account', accountId);
+        }
         // this.transitionTo(`accounts.view-account.${accountId}`);
       })
       .catch(() => {
         this.get('flashMessages')
         .danger('There was a problem. Please try again.');
       });
-      // this.store.query('account', { filter: { user_name: params.userName } })
-      //   .then(accounts =>{
-      //     let targ = accounts.get('firstObject').get('user_name') === params.userName;
-      //     console.log(targ);
-      // });
-
-      // this.get('store').peekAll('account')
-      // .then((accounts) => {
-      //   return accounts.filterBy('user_name', params.userName);
-      // })
-      // .then((account) => {
-      //   console.log(account);
-      //   this.get('flashMessages')
-      //   .success('account retrieved');
-      // })
-      // .catch(() => {
-      //   this.get('flashMessages')
-      //   .danger('There was a problem. Please try again.');
-      // });
     }
   }
 });
