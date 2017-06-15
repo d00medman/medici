@@ -8,7 +8,6 @@ export default Ember.Component.extend({
 
   actions:{
     submit () {
-      // console.log(this.get('params'))
       this.sendAction('submit', this.get('params'));
     },
 

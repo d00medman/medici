@@ -19,7 +19,6 @@ export default Ember.Route.extend({
         if(accountId !=null){
           this.transitionTo('accounts.view-account', accountId);
         }
-        // this.transitionTo(`accounts.view-account.${accountId}`);
       })
       .catch(() => {
         this.get('flashMessages')
