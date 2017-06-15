@@ -1,10 +1,12 @@
-<h4>Username: {{account.user_name}}</h4>
-<h5>Account status: {{if account.creator "Client" "Patron"}}</h5>
-{{#if account.creator}}
-  <h5>Creating: {{account.content_type}}</h5>
-{{/if}}
-
-
-{{#if account.creator}}
-  {{accounts/donate-form donate="donate" account=account}}
+{{#if account}}
+  <h4>Username: {{account.user_name}}</h4>
+  <h5>Account status: {{if account.creator "Client" "Patron"}}</h5>
+  {{#if account.creator}}
+    <h5>Creating: {{account.content_type}}</h5>
+  {{/if}}
+  {{#if account.creator}}
+    {{accounts/donate-form donate="donate" account=account}}
+  {{/if}}
+{{else}}
+  <h4>We're sorry, there is no account with this username</h4>
 {{/if}}
