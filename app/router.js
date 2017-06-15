@@ -17,7 +17,6 @@ Router.map(function () {
     this.route('search-accounts');
     this.route('donate');
   });
-  this.route('donate');
 });
 
 export default Router;
