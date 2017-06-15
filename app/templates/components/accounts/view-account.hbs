@@ -5,7 +5,12 @@
     <h4>Creating: {{account.content_type}}</h4>
   {{/if}}
   {{#if account.creator}}
+  {{#if isAuthenticated}}
     {{accounts/donate-form donate="donate" account=account}}
+  {{/if}}
+  {{#unless isAuthenticated}}
+  <p>In order to donate to this creator, you must first either {{#link-to "sign-in"}}sign in{{/link-to}} or {{#link-to "sign-up"}}create an account{{/link-to}} if you do not already have one</p>
+  {{/unless}}
   {{/if}}
 {{else}}
   <h4>We're sorry, there is no account with this username</h4>
