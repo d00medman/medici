@@ -5,7 +5,7 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "users"}}Users{{/link-to}}</li>
+        <li>{{#link-to "accounts"}}Users{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -21,12 +21,6 @@
   </div>
 </nav>
 
-<h1>Medici</h1>
-<h3>Be a patron of the arts</h3>
-<h4>Frequently used values to be deleted</h4>
-<h5>Patron:amollohan21@gmail.com 28 44</h5>
-<h5>Client:rtitan86@gmail.com 29 45</h5>
-<h5>0.00010000</h5>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
