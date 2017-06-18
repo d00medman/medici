@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-[![Medici Client](http://imgur.com/lLoKLvT)]
+[![Medici Client](https://imgur.com/lLoKLvT)]
 # Medici beta client
 
 Welcome to the front end client of Medici, a app designed to help link prospective donors to artists who need their donation. Meici's front end was build in ember.js and is the first application I have ever built using a front end framework. Medici's is fairly basic, with most of its core functionality being dictated by the back end (which I built first) 
