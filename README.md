@@ -20,8 +20,8 @@ Wireframs can be found [here](http://imgur.com/l1nFU93) and [here](http://imgur.
 
 User stories (copied from my notebook)
 
--As a user, I want to be able to create my account and find the accounts of other users.
--As a patron user, I want to be able to send bitcoin to artists who have Medici accounts
--As a paton user, I want to be able to view the work of my favorite artists (unimplemented)
--As a client user, I want to be able to recieve bitcoin from my fans
--As a client user, I want to be able to display my work for my fans (unimplemented)
+-   As a user, I want to be able to create my account and find the accounts of other users.
+-   As a patron user, I want to be able to send bitcoin to artists who have Medici accounts
+-   As a paton user, I want to be able to view the work of my favorite artists (unimplemented)
+-   As a client user, I want to be able to recieve bitcoin from my fans
+-   As a client user, I want to be able to display my work for my fans (unimplemented)
