@@ -3,7 +3,9 @@
 [![Medici Client](http://imgur.com/lLoKLvT)]
 # Medici beta client
 
-Welcome to the front end client of Medici, a app designed to help link prospective donors to artists who need their donation. Meici's front end was build in ember.js and is the first application I have ever built using a front end framework. Medici's is fairly basic, with most of its core functionality being dictated by the back end (which I built first) 
+Welcome to the front end client of Medici, a app designed to help link prospective donors to artists who need their donation. Meici's front end was build in ember.js and is the first application I have ever built using a front end javascript framework. Medici's is fairly basic, with most of its core functionality being dictated by the back end (which I built first). Because this is my first ember/framework app, I decided to keep it as clean and minimal as possible, requiring little setup beyond that of an initial ember app.
+
+The repo for Medici's API can be found [here](https://github.com/d00medman/mediciAPI), the deployed version of Medici can be found [here](https://d00medman.github.io/medici/). It is worth noting that, at this point in time, the API key used for the donate functionality is disabled until I get create a more stable and secure payment method. If you wish to see it demonstrated, please contact me directly.
 
 ## Planning
 
@@ -14,6 +16,10 @@ When I started building Medici, I set a fairly simple goalAs a result of this en
 ## Building
 
 Building the Medici client actually proved to be the most difficult and frustrating element of capstone by an extremely wide margin. This was for two reasons. First, that I really did not have a good understanding of what ember being opinionated really meant, and thus dove in and attempted to build an app as though I was using a browser template. I have been told that this approach may have worked using react, but it proved extremely problematic in ember. I spent the weekend leading up to capstone week really struggling to even get a basic component path off the ground. I had really no idea how the file structure worked, how components interacted with each other and how data and actions flowed through these two. Once I was able to secure help in clearing up my knowledge gaps, I found the actual building of the client to be a surprisingly smooth process.
+
+## Moving Forward
+
+Broadly speaking, Medici's client is pretty much everything I hoped for. While I have serious dissappointments about the architectural shortcomings on Medici's back end, I am actually quite proud of the functionality I was able to put together in about a week, especially given the difficulty associated with building ones first framework application. Unfortunately, changes on my back end lead me to believe I will need to abandon this version of Medici, but I think it was a competent and effective ember app, one that will help me as I move forward to learn new frameworks (most notably, react.js).
 
 ## User Stories and Wireframes
 
