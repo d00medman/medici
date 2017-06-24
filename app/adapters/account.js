@@ -9,9 +9,11 @@ export default ApplicationAdapter.extend({
   },
 
   recieve_donation(params){
+    console.log(params);
     const api = this.get('host');
-    const url = `${api}/accounts/${params.clientId}/recieve_donation`;
-    return this.ajax(url, 'PATCH', {data: params});
+    const url = `${api}/auth/coinbase`;
+    // , {data: params}
+    return this.ajax(url, 'GET');
   },
 
 });

@@ -21,7 +21,7 @@ export default Ember.Route.extend({
           // adapter.donate(params);
           adapter.recieve_donation(params);
         })
-        .then(() => this.transitionTo('accounts.search-accounts'))
+        // .then(() => this.transitionTo('accounts.search-accounts'))
         .then(() => {
           this.get('flashMessages')
           .success('We have successfully sent your donation');
