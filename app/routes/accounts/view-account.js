@@ -19,7 +19,7 @@ export default Ember.Route.extend({
           params.patronId = account.id;
           const adapter = this.store.adapterFor('account');
           // adapter.donate(params);
-          adapter.recieve_donation(params);
+          return adapter.recieve_donation(params);
         })
         // .then(() => this.transitionTo('accounts.search-accounts'))
         .then(() => {
